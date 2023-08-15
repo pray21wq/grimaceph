@@ -1,0 +1,36 @@
+local keychecked = false
+local hwid = nil1
+local hwidplr = game:GetService("RbxAnalyticsService"):GetClientId()
+
+if _G.Key == "Prayhub" then
+	keychecked = true
+end
+
+if keychecked == true then
+	hwid = "9863489F-DCAD-4E09-AB2D-F84CF09F7125"
+   if hwidplr == hwid then
+	 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GreenDeno/Venyx-UI-Library/main/source.lua"))()
+local venyx = library.new("Venyx", 5013109572)
+
+-- themes
+local themes = {
+Background = Color3.fromRGB(24, 24, 24),
+Glow = Color3.fromRGB(0, 0, 0),
+Accent = Color3.fromRGB(10, 10, 10),
+LightContrast = Color3.fromRGB(20, 20, 20),
+DarkContrast = Color3.fromRGB(14, 14, 14),  
+TextColor = Color3.fromRGB(255, 255, 255)
+}
+
+-- first page
+local page = venyx:addPage("Main", 5012544693)
+local section1 = page:addSection("Win in 0 sec")
+section1:addButton("click", function()
+local TweenService = game:GetService("TweenService")
+local Tw = TweenService:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(0, Enum.EasingStyle.Linear, Enum.EasingDirection.Out,0,false,0), 
+{CFrame = CFrame.new(1.6424446105957031, 0.9130096435546875, 1000000)}):Play()
+end)
+	 else
+	 print("Key invaild")
+       end
+    end
